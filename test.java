@@ -1,40 +1,41 @@
-import java.util.*;
-public class test{
-    public static void main(String[] args)
+import java.util.Scanner;
+public class test
 {
-
+    public static void main(String[] args)
+    {
+    int iCount;
+    int iMax;
+    int iMin;
+    float iMid;
     Scanner scan = new Scanner(System.in);
-     int   iCount = 4;
-    int[] arrArray = new int[iCount];
-    for (int i = 0 ; i< iCount;i++)
-    {   
-        arrArray[i] = scan.nextInt(); 
-        System.out.println(arrArray[i]);
-    }
- /*   if (iCount%2 == 0)
+    iCount = scan.nextInt();
+    int[] arr = new int[iCount];
+    for(int i = 0 ; i< iCount;i++)
     {
-        iMid = arrArray[iCount/2];
+        arr[i] = scan.nextInt();
+    }
+    if (iCount%2 == 0)
+    {
+        iMid = (arr[iCount/2]+arr[iCount/2-1])/2f;
     }
     else{
-        iMid = (arrArray[(iCount-1)/2]+arrArray[(iCount+1)/2])/2f;
+        iMid = arr[(iCount-1)/2];
        }
-
-
-    if(arrArray[0]==arrArray[iCount-1])
+    if(arr[0]==arr[iCount-1])
     {
-        iMax = iMin = arrArray[0];
+        iMax = iMin = arr[0];
     }
     else{
-        if(arrArray[0]<arrArray[iCount-1])
+        if(arr[0]<arr[iCount-1])
         {
-            iMax = arrArray[iCount -1];
-            iMin = arrArray[0];
+            iMax = arr[iCount -1];
+            iMin = arr[0];
         }
         else{
-            iMax = arrArray[0];
-            iMin = arrArray[iCount-1];
+            iMax = arr[0];
+            iMin = arr[iCount-1];
         }
     }
-    System.out.println(iMax+" "+iMid+" "+iMin);*/
-}
+    System.out.println(iMax+" "+iMid+" "+iMin);
+    }
 }
